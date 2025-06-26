@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --roxo-fundo: #2b134b;
+    --dourado: #ffb300;
+    --cinza-claro: #514869;
+    --cinza-input: #726b91;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--roxo-fundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-login {
+    background: var(--roxo-fundo);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper h1 {
+    color: var(--dourado);
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.textfield {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.textfield label {
+    color: #f0ffffde;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+}
+
+.textfield input {
+    width: 100%;
+    height: 50px;
+    border-radius: 40px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    background: var(--cinza-input);
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.textfield input:focus {
+    border-color: var(--dourado);
+    background: var(--cinza-claro);
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 50px;
+    background: var(--dourado);
+    color: var(--roxo-fundo);
+    border: none;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.wrapper .btn:hover {
+    transform: translateY(-3px);
+}
+
+.registrar-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.registrar-link a {
+    font-weight: 700;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.registrar-link a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de voltar fixo */
+.btn-voltar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: var(--dourado);
+    color: var(--roxo-fundo);
+    padding: 12px 24px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+.btn-voltar:hover {
+    transform: translateY(-2px);
+}
+
+/* Esconde a parte visual da esquerda só em telas maiores */
+.left-login {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .main-login {
+        max-width: 1000px;
+        display: flex;
+        padding: 50px;
+    }
+
+    .left-login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .left-login h1 {
+        color: var(--dourado);
+        font-size: 38px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .left-login img {
+        width: 80%;
+    }
+
+    .right-login {
+        width: 50%;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+}

@@ -1,0 +1,183 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b134b, #1c0f2e);
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+/* Container com efeito vidro */
+.container {
+  width: 100%;
+  max-width: 560px;
+  margin: 100px auto 40px auto;
+  padding: 40px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #ffb300;
+  margin-bottom: 35px;
+  font-size: 28px;
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(255, 179, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-weight: 600;
+  color: #ddd;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+select,
+input[type="date"],
+input[type="number"],
+input[type="submit"] {
+  padding: 14px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 12px;
+  background-color: #2a1248;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 0 1px #444;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px 18px;
+}
+
+select:focus,
+input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 179, 0, 0.3);
+  background-color: #38155f;
+}
+
+
+input[type="submit"] {
+  background: linear-gradient(135deg, #ffb300, #ff9900);
+  color: #2b134b;
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 16px;
+  font-size: 16px;
+  box-shadow: 0 5px 20px rgba(255, 179, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #ff9900, #ffb300);
+  transform: translateY(-2px);
+}
+
+.total {
+  font-weight: bold;
+  font-size: 17px;
+  color: #ffcc66;
+  text-align: right;
+}
+
+.btn-voltar {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  background: linear-gradient(135deg, #ffb300, #ff9900);
+  color: #2b134b;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 5px 20px rgba(255, 179, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.btn-voltar:hover {
+  transform: scale(1.05);
+}
+
+.servico-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background-color: #1c0f2e;
+  border-radius: 12px;
+  border: 1px solid #3e2d5a;
+}
+
+.btn-add-servico {
+  background: linear-gradient(135deg, #ffb300, #ff9900);
+  color: #2b134b;
+  border: none;
+  padding: 16px;
+  font-size: 15px;
+  border-radius: 50px;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(255, 179, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-add-servico:hover {
+  background: linear-gradient(135deg, #ff9900, #ffb300);
+  transform: scale(1.03);
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    margin-top: 120px;
+    padding: 30px 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .btn-voltar {
+    top: 20px;
+    left: 15px;
+    padding: 10px 20px;
+  }
+
+  .btn-add-servico {
+    font-size: 14px;
+    padding: 14px;
+  }
+
+  .total {
+    font-size: 15px;
+  }
+}

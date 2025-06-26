@@ -1,0 +1,59 @@
+* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body {
+    background: url(./imagens/fundo.png) center/cover no-repeat;
+    color:white;
+    min-height:100vh;
+    padding-bottom:50px;
+}
+nav.navbar {
+    background:#1a1427;
+    padding:10px 20px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+}
+.navbar-brand {color:#ffa600;font-weight:700;font-size:1.3rem;}
+.btn {border-radius:30px;padding:8px 20px;font-weight:600;}
+.btn-primary {background:linear-gradient(45deg,#008cff,#005bb5);border:none;}
+.btn-danger {background:#ff4f5a;border:none;}
+.btn-voltar {
+    position:fixed;top:80px;left:20px;background:#ffb300;color:#fff;
+    text-decoration:none;padding:10px 20px;border-radius:30px;
+    font-weight:600;box-shadow:0 4px 6px rgba(0,0,0,.3);transition:.3s;z-index:999;
+}
+.btn-voltar:hover {background:#d59500;transform:translateY(-3px);}
+h1 {font-size:1.8rem;margin:30px 0 20px;text-shadow:2px 2px 5px #000;text-align:center;}
+.box-search {
+    display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:20px;
+}
+.box-search input,.box-search select {
+    min-width:180px;max-width:220px;font-size:0.9rem;padding:8px 10px;
+    border-radius:10px;border:none;outline:none;
+}
+.box-search button {
+    border-radius:50%;border:none;width:48px;height:48px;font-size:1.3rem;
+    background:linear-gradient(45deg,#ffb300,#d39400);
+    box-shadow:0 3px 6px rgba(0,0,0,.4);
+}
+.table-container {margin:20px;overflow-x:auto;}
+.table-bg {background:rgba(0,0,0,.5);border-radius:12px;min-width:700px;}
+table {width:100%;border-collapse:collapse;}
+th {
+    background:#333;color:#ffa600;padding:12px 8px;
+    font-size:0.9rem;text-align:center;white-space:nowrap;
+}
+td {padding:10px 5px;font-size:0.85rem;text-align:center;white-space:nowrap;}
+.status-btn {
+    border:none;padding:6px 16px;border-radius:20px;
+    font-weight:600;font-size:0.8rem;transition:.3s;
+}
+.status-btn.pendente {background:#f0ad4e;color:#000;}
+.status-btn.concluido {background:#5cb85c;color:#fff;}
+@media(max-width:768px){
+    nav.navbar {flex-direction:column;gap:10px;}
+    .navbar-brand {font-size:1.1rem;}
+    .btn {padding:6px 16px;font-size:0.8rem;}
+    h1 {font-size:1.5rem;margin:20px 10px;}
+    .box-search {flex-direction:column;align-items:center;}
+    .box-search input,.box-search select {width:90%;max-width:300px;font-size:0.85rem;}
+    .table-bg {min-width:600px;}
+    th,td {font-size:0.75rem;padding:8px 3px;}
+}
