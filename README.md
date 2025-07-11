@@ -2,6 +2,8 @@
 # ✂️ Barbearia Na Cara do Gol
 
 Bem-vindo ao repositório oficial do sistema de gerenciamento da **Barbearia Na Cara do Gol** — um projeto completo e moderno para controle de agendamentos, serviços e usuários, com áreas exclusivas para **clientes, barbeiros e administradores**.
+segue o link do sistema em uso abaixo:
+https://caradogol.com.br
 
 ---
 
